@@ -1,0 +1,144 @@
+:root {
+  --gray: #d3d3d3;
+  --black: #0e0f0f;
+  --brown: #caa971;
+  --yellow: #fcf3a6;
+  --sand: #fcfbeb;
+  --white: #fff;
+  --font: "Helvetica", "Arial", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  font-family: var(--font);
+}
+
+p,
+a,
+button {
+  font-family: var(--font);
+}
+
+button,
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--black);
+  font-size: 10px;
+  width: 8rem;
+  height: 1.8rem;
+}
+.context {
+  display: none;
+}
+@media (min-width: 581px) {
+  .context {
+    display: contents;
+  }
+  .context p {
+    padding-bottom: 5rem;
+  }
+  .context h1 {
+    font-size: 200%;
+  }
+
+  .text {
+    position: absolute;
+    top: 40rem;
+    left: 55%;
+    padding-right: 20%;
+    font-size: 30px;
+  }
+  .header-container {
+    background-image: linear-gradient(to right, #fcf3a6, #fcf3a6, #fcf3a6, #fff, #fff, #fff);
+    margin: -1rem;
+  }
+  button,
+  a {
+    position: absolute;
+    top: 60rem;
+    left: 55%;
+  }
+
+  .header-text {
+    position: absolute;
+    top: 37rem;
+    left: 7%;
+  }
+
+  img {
+    width: 40%;
+    margin-left: 30rem;
+
+    filter: brightness(150%);
+  }
+  h1,
+  h2 {
+    font-family: var(--font);
+    font-size: 6.7rem;
+  }
+}
+
+@media (max-width: 580px) {
+  img {
+    width: 50%;
+    height: 80vh;
+    object-fit: cover;
+    position: relative;
+  }
+
+  .header-text {
+    position: absolute;
+    top: 14%;
+    left: 37%;
+  }
+  body {
+    background-color: white;
+  }
+  .text {
+    position: absolute;
+    top: 30%;
+    left: 37%;
+  }
+
+  button,
+  a {
+    position: absolute;
+    top: 60%;
+    left: 43%;
+  }
+}
+
+@media (max-width: 490px) {
+  .header-container {
+    display: grid;
+    grid-template-rows: 1fr;
+    height: 100vh;
+  }
+  body {
+    background-color: white;
+  }
+  img {
+    width: 100%;
+  }
+
+  .header-text {
+    position: static;
+  }
+
+  .text {
+    position: static;
+  }
+
+  button,
+  a {
+    position: static;
+  }
+}
